@@ -23,7 +23,7 @@ const Modal_3 = () => {
           />
           <label
             className="form-check-label inline-block font-medium"
-            for="flexRadioDefault1"
+            htmlFor="flexRadioDefault1"
           >
             Starter
           </label>
@@ -40,7 +40,7 @@ const Modal_3 = () => {
           />
           <label
             className="form-check-label inline-block font-medium"
-            for="flexRadioDefault1"
+            htmlFor="flexRadioDefault1"
           >
             Pro
           </label>
@@ -57,7 +57,7 @@ const Modal_3 = () => {
           />
           <label
             className="form-check-label inline-block font-medium"
-            for="flexRadioDefault1"
+            htmlFor="flexRadioDefault1"
           >
             Business
           </label>

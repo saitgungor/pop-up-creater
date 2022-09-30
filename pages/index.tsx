@@ -1,6 +1,8 @@
 import { Fragment } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import MainNavigation from '../components/layout/MainNavigation';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -10,31 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/images/logo.svg" />
       </Head>
       <div className="px-[243px] h-[900px] flex flex-col w-full bg-gradient-to-b  from-[#FFFFFF] to-[#E3F2F6] relative">
-        <header className="mt-[23px] w-full">
-          <div className="flex justify-between">
-            <div className="flex items-center">
-              <img src="/images/logo.svg" />
-              <span className="font-extrabold ml-[10px]">modal.cards</span>
-              <ul className="flex ml-[82px] gap-[30px] font-medium">
-                <li className="flex">
-                  Solution{' '}
-                  <span className="ml-[9.5px] flex items-center">
-                    <img src="/images/chevron-down.svg" />
-                  </span>
-                </li>
-                <li>Product Tour</li>
-                <li>Showcase</li>
-                <li>Pricing</li>
-              </ul>
-            </div>
-            <div className="gap-[30px] flex items-center">
-              Sign in
-              <button className="w-[121px] h-9 bg-[#7D4AEA] flex items-center justify-center  text-white rounded-xl">
-                Try for free
-              </button>
-            </div>
-          </div>
-        </header>
+        <MainNavigation />
         <div className="text-7xl mt-[99px] w-[486px] h-[160px] font-semibold">
           <h1>Simple modal card creator</h1>
         </div>
@@ -46,7 +24,9 @@ const Home: NextPage = () => {
           </p>
         </div>
         <button className="w-[171px] h-[60px] flex justify-center sm: items-center bg-[#7D4AEA] font-medium text-lg text-white rounded-xl mt-[60px]">
-          Try it out now
+          <Link href="/templates">
+            <a>Try it out now</a>
+          </Link>
         </button>
         <ul className="flex mt-10 text-[13px] font-poppins gap-[25px] ">
           <li className="flex items-center ">

@@ -24,7 +24,7 @@ const Modal_4 = () => {
         </p>
       </div>
 
-      <div class="w-full px-[65px] mt-[34px]">
+      <div className="w-full px-[65px] mt-[34px]">
         <div className="w-full flex  flex-col  ">
           <button className="w-full h-[48px] text-white rounded-lg bg-[#7D4AEA] flex justify-center items-center">
             Delete my profile

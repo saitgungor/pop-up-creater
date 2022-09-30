@@ -19,3 +19,8 @@ body {
   right: -327px;
   top: -88px;
 }
+
+.active {
+  background: white;
+  color: black;
+}

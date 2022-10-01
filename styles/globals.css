@@ -24,3 +24,7 @@ body {
   background: white;
   color: black;
 }
+
+.positionActive {
+  background: #7d4aea;
+}

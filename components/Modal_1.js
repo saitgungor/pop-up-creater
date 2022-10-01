@@ -1,9 +1,6 @@
 const Modal_1 = () => {
   return (
-    <div
-      className="flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg relative"
-      id="modal-1"
-    >
+    <div className="flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg relative">
       <div className="bg-[#7D4AEA] w-[90px] h-[90px] mt-10 flex justify-center items-center rounded-full">
         <img
           src="/images/security-icon.svg"
@@ -11,7 +8,7 @@ const Modal_1 = () => {
           className="w-[36px] h-[44px]"
         />
       </div>
-      <div className="absolute top-[23px] right-[23px] ">
+      <div className="absolute top-[23px] right-[23px] cursor-pointer ">
         <img src="/images/close-icon.svg" alt="close-icon" />
       </div>
       <div className="mt-[29px] text-3xl font-bold">

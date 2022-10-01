@@ -8,7 +8,7 @@ const Modal_4 = () => {
           className="w-[28px] h-[36px]"
         />
       </div>
-      <div className="absolute top-[23px] right-[23px] ">
+      <div className="absolute top-[23px] right-[23px] cursor-pointer">
         <img src="/images/close-icon.svg" alt="close-icon" />
       </div>
       <div className="mt-[29px] text-3xl font-bold">

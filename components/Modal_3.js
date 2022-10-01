@@ -1,7 +1,7 @@
 const Modal_3 = () => {
   return (
     <div className="flex flex-col items-center bg-white w-120 h-150 rounded-lg relative">
-      <div className="absolute top-6 right-6 ">
+      <div className="absolute top-[23px] right-[23px] cursor-pointer">
         <img src="/images/close-icon.svg" alt="close-icon" />
       </div>
       <div className="uppercase text-[#7D4AEA] text-lg mt-[49px]">

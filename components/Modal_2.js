@@ -5,7 +5,7 @@ const Modal_2 = () => {
         <img src="/images/modal-2-banner.png" alt="modal-banner" />
       </div>
 
-      <div className="absolute top-6 right-6 ">
+      <div className="absolute top-[23px] right-[23px] cursor-pointer">
         <img src="/images/close-icon.svg" alt="close-icon" />
       </div>
       <div className="mt-[39px] text-3xl font-bold">

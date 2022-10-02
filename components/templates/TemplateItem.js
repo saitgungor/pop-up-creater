@@ -1,11 +1,15 @@
 import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
+import { modalActions } from '../../store/modal-slice';
 
 const TemplateItem = props => {
   const router = useRouter();
+  const dispatch = useDispatch();
 
-  const selectTemplateHander = event => {
-    console.log(event);
-    router.push('/apperance/' + props.children.props.id);
+  const selectTemplateHander = () => {
+    const id = props.children.props.id;
+    router.push('/apperance/' + id);
+    dispatch(modalActions.selectModalHandler(id));
   };
   return (
     <div className="bg-[#F5F5F5] flex justify-center items-center border border-[#EAEAEA] rounded-xl relative  ">

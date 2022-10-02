@@ -7,16 +7,13 @@ const UploadLogo = () => {
   const inputRef = useRef(null);
   const dispatch = useDispatch();
   const imageURL = useSelector(state => state.modal.imageURL);
-  console.log(imageURL);
 
   const clickHandler = () => {
     inputRef.current.click();
-    console.log('clicked');
   };
   const addPhotoHandler = event => {
     const imgURL = URL.createObjectURL(event.target.files[0]);
     dispatch(modalActions.updateImageSrc(imgURL));
-    console.log(event.target.files[0]);
   };
   return (
     <div

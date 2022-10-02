@@ -1,13 +1,21 @@
+import { useDispatch } from 'react-redux';
+import { modalActions } from '../../store/modal-slice';
+
 const ColorPalete = () => {
+  const dispatch = useDispatch();
   const changeColorHandler = event => {
     if (!event.target.id) return;
-    console.log(event.target.id);
+    dispatch(modalActions.updateColor(event.target.id));
   };
   return (
     <div
-      className="w-[253px] h-[42px] gap-[10px] grid grid-cols-5"
+      className="w-[303px] h-[42px] gap-[10px] grid grid-cols-6"
       onClick={changeColorHandler}
     >
+      <div
+        className="bg-[#7D4AEA] rounded-[10px] border border-black border-opacity-30 cursor-pointer"
+        id="#7D4AEA"
+      ></div>
       <div
         className="bg-black rounded-[10px] border border-black border-opacity-30 cursor-pointer"
         id="#000000"

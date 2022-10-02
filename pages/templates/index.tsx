@@ -10,7 +10,7 @@ const StepOne: NextPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Step 1: Choose Your Template</title>
+        <title>Choose Your Template</title>
         <link rel="icon" href="/images/logo.svg" />
       </Head>
       <div className="w-full px-[243px]">

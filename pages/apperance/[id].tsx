@@ -9,7 +9,7 @@ import Size from '../../components/UI/Size';
 import Position from '../../components/UI/Position';
 import ColorPalette from '../../components/UI/ColorPalette';
 import UploadLogo from '../../components/UI/UploadLogo';
-import Input from '../../components/UI/Input1';
+import Input1 from '../../components/UI/Input1';
 
 const StepTwo: NextPage = () => {
   console.log(MainModal);
@@ -17,7 +17,7 @@ const StepTwo: NextPage = () => {
     <Fragment>
       <Head>
         <title>Customize Your Pop-up</title>
-        <link rel="icon" href="/images/logo.svg" />
+        <link rel="icon" href="/images/popup-icon.svg" />
       </Head>
       <div className="w-full px-[243px]">
         <MainNavigation />
@@ -43,7 +43,7 @@ const StepTwo: NextPage = () => {
         </div>
         <Steps number="3" text="Content" />
         <div className="text-[14px] mt-[30px]">Edit your content</div>
-        <Input />
+        <Input1 />
       </div>
     </Fragment>
   );

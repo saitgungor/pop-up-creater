@@ -11,7 +11,7 @@ const StepOne: NextPage = () => {
     <Fragment>
       <Head>
         <title>Choose Your Template</title>
-        <link rel="icon" href="/images/logo.svg" />
+        <link rel="icon" href="/images/popup-icon.svg" />
       </Head>
       <div className="w-full px-[243px]">
         <MainNavigation />

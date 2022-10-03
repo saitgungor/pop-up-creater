@@ -3,13 +3,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import MainNavigation from '../components/layout/MainNavigation';
 import Link from 'next/link';
+import AccordionCollapse from '../components/UI/Accordion-collapse';
 
 const Home: NextPage = () => {
   return (
     <Fragment>
       <Head>
         <title>Pop-up Creater by OSG</title>
-        <link rel="icon" href="/images/logo.svg" />
+        <link rel="icon" href="/images/popup-icon.svg" />
       </Head>
       <div className="px-[243px] h-[900px] flex flex-col w-full bg-gradient-to-b  from-[#FFFFFF] to-[#E3F2F6] relative">
         <MainNavigation />
@@ -148,8 +149,143 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className="px-[243px] mt-[90px] justify-center text-center font-poppins">
+        <h2 className="text-4xl font-semibold w-full">
+          Conversion & UX ready popups & modals
+        </h2>
+        <div className="grid grid-cols-3 gap-[30px] mt-[50px]">
+          <div className="h-[267px] bg-[#F5F5F5] flex flex-col items-center">
+            <div className="mt-[54px]">
+              <img
+                className="w-8 h-10"
+                src="/images/conversion-ux/pixel-perfect.svg"
+                alt="pixel-perfect"
+              />
+            </div>
+            <div className="font-semibold text-[18px] mt-6 ">Pixel Perfect</div>
+            <p className="text-sm mt-[10px] w-[237px]">
+              Helps you calculate your email marketing roi to measure success.
+            </p>
+          </div>
+          <div className="h-[267px] bg-[#F5F5F5] flex flex-col items-center">
+            <div className="mt-[54px]">
+              <img
+                className="w-8 h-10"
+                src="/images/conversion-ux/conversion-ready.svg"
+                alt="conversion-ready"
+              />
+            </div>
+            <div className="font-semibold text-[18px] mt-6 ">
+              Conversion Ready
+            </div>
+            <p className="text-sm mt-[10px] w-[237px]">
+              Empowers your emails by generating afree code for a CTA in your
+              subject line.
+            </p>
+          </div>
+          <div className="h-[267px] bg-[#F5F5F5] flex flex-col items-center">
+            <div className="mt-[54px]">
+              <img
+                className="w-8 h-10"
+                src="/images/conversion-ux/modern-usefull.svg"
+                alt="modern-usefull"
+              />
+            </div>
+            <div className="font-semibold text-[18px] mt-6 ">
+              Modern & Useful
+            </div>
+            <p className="text-sm mt-[10px] w-[237px]">
+              Enables you to estimate the total profit of your investment on a
+              popup service.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="px-[243px] mt-[90px] justify-center text-center font-poppins">
+        <h2 className="text-4xl font-semibold w-full">
+          Frequently Asked Questions
+        </h2>
+        <AccordionCollapse />
+      </div>
+      <div className="px-[243px] mt-[120px] justify-center text-center font-poppins">
+        <h2 className="text-4xl font-semibold w-full">
+          Build great popups without code
+        </h2>
+        <div className="flex justify-between mt-[70px]">
+          <div className="flex flex-col items-center">
+            <div className="h-[120px] w-[120px] bg-[#7D4AEA] rounded-full flex items-center justify-center">
+              <img
+                src="/images/build-great-popups/target-icon.svg"
+                alt="target-icon"
+              />
+            </div>
+            <h3 className="pt-[30px] text-[18px] font-semibold">
+              Targeting Options
+            </h3>
+            <p className="pt-[10px] text-sm max-w-[230px]">
+              Target +26 trigger to your visitors
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="h-[120px] w-[120px] bg-[#7D4AEA] rounded-full flex items-center justify-center">
+              <img
+                src="/images/build-great-popups/no-code-icon.svg"
+                alt="no-code-icon"
+              />
+            </div>
+            <h3 className="pt-[30px] text-[18px] font-semibold">No-Code</h3>
+            <p className="pt-[10px] text-sm max-w-[230px]">
+              No code required while you’re creating a popup
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="h-[120px] w-[120px] bg-[#7D4AEA] rounded-full flex items-center justify-center">
+              <img
+                src="/images/build-great-popups/target-option-icon.svg"
+                alt="target-option-icon"
+              />
+            </div>
+            <h3 className="pt-[30px] text-[18px] font-semibold">
+              Targeting Options
+            </h3>
+            <p className="pt-[10px] text-sm max-w-[230px]">
+              Integrated with your marketing and CRM platforms
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="h-[120px] w-[120px] bg-[#7D4AEA] rounded-full flex items-center justify-center">
+              <img
+                src="/images/build-great-popups/aws-icon.svg"
+                alt="aws-icon"
+              />
+            </div>
+            <h3 className="pt-[30px] text-[18px] font-semibold">
+              Targeting Options
+            </h3>
+            <p className="pt-[10px] text-sm max-w-[230px]">
+              Don’t worry about speed and Amazon AWS resources
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full flex flex-col font-poppins items-center mt-[80px]">
+        <img src="/images/popup-icon.svg" alt="popup-icon" />
+        <p className="text-xs pt-[15px] pb-[80px]">Powered by Popupsmart</p>
+      </div>
     </Fragment>
   );
 };
 
 export default Home;
+
+{
+  /* <button
+                type="button"
+                className="flex items-center justify-between w-full pl-[30px] font-medium text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                data-accordion-target="#accordion-collapse-body-1"
+                aria-expanded="true"
+                aria-controls="accordion-collapse-body-1"
+              >
+                <span>What is Flowbite?</span>
+              </button> */
+}

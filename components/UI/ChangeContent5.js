@@ -2,23 +2,25 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { modalActions } from '../../store/modal-slice';
 
-const Input1 = () => {
+const ChangeContent5 = () => {
   const dispatch = useDispatch();
-  const content1 = useSelector(state => state.modal.modalProps.content1);
+  const content5 = useSelector(state => state.modal.modalProps.content5);
+  const contentCount = useSelector(
+    state => state.modal.modalProps.contentCount
+  );
 
   const [input, setInput] = useState('');
   useEffect(() => {
-    if (content1) setInput(content1);
-  }, [content1]);
+    if (content5) setInput(content5);
+  }, [content5]);
 
   const onChangeHandler = event => {
-    console.log(event.target.value);
     setInput(event.target.value);
-    dispatch(modalActions.updateContent({ content1: event.target.value }));
+    dispatch(modalActions.updateContent({ content5: event.target.value }));
   };
 
   return (
-    <div>
+    <div className={`${contentCount >= 5 ? '' : 'hidden'}`}>
       <input
         className="w-[378px] h-9 border mt-[15px] border-[#DDDDDD] rounded-lg pl-3 placeholder-black outline-none focus:border-[#7D4AEA] focus:ring focus:ring-violet-300"
         type="text"
@@ -30,4 +32,4 @@ const Input1 = () => {
   );
 };
 
-export default Input1;
+export default ChangeContent5;

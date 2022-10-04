@@ -33,8 +33,8 @@ const Modal_1 = () => {
   return (
     <div
       className={`flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg ${
-        modalProps.positionClassName
-      } ${'scale-' + modalProps.scale}`}
+        activeProps.positionClassName
+      } ${'scale-' + activeProps.scale}`}
     >
       <div className="bg-[#7D4AEA] w-[90px] h-[90px] mt-10 flex justify-center items-center rounded-full">
         <img
@@ -59,7 +59,7 @@ const Modal_1 = () => {
         <input
           className="border pl-3 h-[47px] border-[#D2DAE3] rounded-lg w-full placeholder-black  "
           type="code"
-          placeholder="Code"
+          placeholder={activeProps.content3}
           id="code"
         />
         <div className="w-full flex mt-7.75 justify-between ">

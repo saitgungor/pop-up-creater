@@ -1,14 +1,15 @@
 import React, { Suspense } from 'react';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
 function loadComponent(name) {
   const Component = React.lazy(() => import(`./Modal_${name}`));
   return Component;
 }
 function MainModal() {
-  const modalId = useSelector(state => state.modal.activeModalId);
-  const activeModal = modalId;
-  const Component = loadComponent(activeModal);
+  const router = useRouter();
+  const id = router.query.id;
+  const Component = loadComponent(id);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

@@ -6,7 +6,12 @@ const modalSlice = createSlice({
     imageExist: true,
     imageURL: '',
     activeModalId: '',
-    modalProps: { size: 's', position: 'm' },
+    modalProps: {
+      scale: '100',
+      position: 'm',
+      positionClassName:
+        'absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]',
+    },
   },
   reducers: {
     updateImageSrc(state, action) {
@@ -23,10 +28,15 @@ const modalSlice = createSlice({
       state.modalProps = { ...state.modalProps, color: action.payload };
     },
     updateSize(state, action) {
-      state.modalProps = { ...state.modalProps, size: action.payload };
+      state.modalProps = { ...state.modalProps, scale: action.payload };
     },
     updatePosition(state, action) {
-      state.modalProps = { ...state.modalProps, position: action.payload };
+      console.log(action);
+      state.modalProps = {
+        ...state.modalProps,
+        positionClassName: action.payload[0],
+        position: action.payload[1],
+      };
     },
     updateContent(state, action) {
       state.modalProps = { ...state.modalProps, ...action.payload };

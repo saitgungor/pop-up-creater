@@ -6,8 +6,45 @@ const Position = () => {
   const position = useSelector(state => state.modal.modalProps.position);
 
   const onPositionHandler = event => {
-    if (!event.target.id) return;
-    dispatch(modalActions.updatePosition(event.target.id));
+    const id = event.target.id;
+    if (!id) return;
+    let positionClassName;
+    switch (id) {
+      case 'tr':
+        console.log('tr');
+        positionClassName = 'absolute top-0 right-0 origin-top-right ';
+        break;
+      case 'tm':
+        positionClassName =
+          'absolute top-0 left-1/2  translate-x-[-50%] origin-top  ';
+        break;
+      case 'tl':
+        positionClassName = 'absolute top-0 left-0 origin-top-left ';
+        break;
+      case 'mr':
+        positionClassName =
+          'absolute right-0 top-1/2 translate-y-[-50%] origin-right  ';
+        break;
+      case 'm':
+        positionClassName =
+          'absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] ';
+        break;
+      case 'ml':
+        positionClassName =
+          'absolute left-0 top-1/2 translate-y-[-50%] origin-left  ';
+        break;
+      case 'br':
+        positionClassName = 'absolute bottom-0 right-0 origin-bottom-right ';
+        break;
+      case 'bm':
+        positionClassName =
+          'absolute bottom-0 left-1/2  translate-x-[-50%] origin-bottom  ';
+        break;
+      case 'bl':
+        positionClassName = 'absolute bottom-0 left-0 origin-bottom-left';
+        break;
+    }
+    dispatch(modalActions.updatePosition([positionClassName, id]));
   };
 
   return (

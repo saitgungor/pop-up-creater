@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useSelector } from 'react-redux';
 
 import MainNavigation from '../../components/layout/MainNavigation';
 import Steps from '../../components/UI/Steps';
@@ -12,7 +13,8 @@ import UploadLogo from '../../components/UI/UploadLogo';
 import Input1 from '../../components/UI/Input1';
 
 const StepTwo: NextPage = () => {
-  console.log(MainModal);
+  const scale = useSelector(state => state.modal.modalProps.scale);
+
   return (
     <Fragment>
       <Head>
@@ -33,12 +35,8 @@ const StepTwo: NextPage = () => {
             <div className="text-[14px] mt-[30px]">Upload Logo</div>
             <UploadLogo />
           </div>
-          <div className="w-2/3 ml-[50px] bg-red-500">
-            <div className="w-full flex">
-              <div className="shadow-xl scale-[.5]">
-                <MainModal />
-              </div>
-            </div>
+          <div className="w-2/3 ml-[50px] bg-[#dddddd] border-[#666666] border-4 relative">
+            <MainModal />
           </div>
         </div>
         <Steps number="3" text="Content" />

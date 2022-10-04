@@ -31,7 +31,11 @@ const Modal_1 = () => {
   }
 
   return (
-    <div className="flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg relative">
+    <div
+      className={`flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg ${
+        modalProps.positionClassName
+      } ${'scale-' + modalProps.scale}`}
+    >
       <div className="bg-[#7D4AEA] w-[90px] h-[90px] mt-10 flex justify-center items-center rounded-full">
         <img
           src={activeProps.imgSrc}

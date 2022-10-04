@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { modalActions } from '../../store/modal-slice';
 
@@ -6,11 +6,15 @@ const Input1 = () => {
   const dispatch = useDispatch();
   const content1 = useSelector(state => state.modal.modalProps.content1);
 
-  const [input, setInput] = useState(content1);
+  const [input, setInput] = useState('');
+  useEffect(() => {
+    if (content1) setInput(content1);
+  }, [content1]);
 
   const onChangeHandler = event => {
+    console.log(event.target.value);
     setInput(event.target.value);
-    dispatch(modalActions.updateContent({ content1: input }));
+    dispatch(modalActions.updateContent({ content1: event.target.value }));
   };
 
   return (
@@ -20,7 +24,7 @@ const Input1 = () => {
         type="text"
         id="content-1"
         onChange={onChangeHandler}
-        value={content1 || ''}
+        value={input}
       />
     </div>
   );

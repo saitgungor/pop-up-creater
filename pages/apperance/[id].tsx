@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
 
 import MainNavigation from '../../components/layout/MainNavigation';
 import Steps from '../../components/UI/Steps';
@@ -10,11 +9,13 @@ import Size from '../../components/UI/Size';
 import Position from '../../components/UI/Position';
 import ColorPalette from '../../components/UI/ColorPalette';
 import UploadLogo from '../../components/UI/UploadLogo';
-import Input1 from '../../components/UI/Input1';
+import ChangeContent1 from '../../components/UI/ChangeContent1';
+import ChangeContent2 from '../../components/UI/ChangeContent2';
+import ChangeContent3 from '../../components/UI/ChangeContent3';
+import ChangeContent4 from '../../components/UI/ChangeContent4';
+import ChangeContent5 from '../../components/UI/ChangeContent5';
 
 const StepTwo: NextPage = () => {
-  const scale = useSelector(state => state.modal.modalProps.scale);
-
   return (
     <Fragment>
       <Head>
@@ -41,7 +42,11 @@ const StepTwo: NextPage = () => {
         </div>
         <Steps number="3" text="Content" />
         <div className="text-[14px] mt-[30px]">Edit your content</div>
-        <Input1 />
+        <ChangeContent1 />
+        <ChangeContent2 />
+        <ChangeContent3 />
+        <ChangeContent4 />
+        <ChangeContent5 />
       </div>
     </Fragment>
   );

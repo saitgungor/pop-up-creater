@@ -12,6 +12,7 @@ const Modal_1 = () => {
     content3: 'Code',
     contentCount: 3,
     color: '#7D4AEA',
+    isUpdated: true,
   };
 
   const activeModalId = useSelector(state => state.modal.activeModalId);
@@ -20,7 +21,7 @@ const Modal_1 = () => {
     dispatch(modalActions.updateModalProps(initialModalProps));
   }, [dispatch]);
   const modalProps = useSelector(state => state.modal.modalProps);
-  const activeProps = modalProps.content1 ? modalProps : initialModalProps;
+  const activeProps = modalProps.isUpdated ? modalProps : initialModalProps;
   let color;
   if (activeProps.color === '#ffffff') {
     color = 'bg-white';
@@ -32,9 +33,7 @@ const Modal_1 = () => {
 
   return (
     <div
-      className={`flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg ${
-        activeProps.positionClassName
-      } ${'scale-' + activeProps.scale}`}
+      className={`flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg ${activeProps.positionClassName} ${activeProps.scale}`}
     >
       <div className="bg-[#7D4AEA] w-[90px] h-[90px] mt-10 flex justify-center items-center rounded-full">
         <img

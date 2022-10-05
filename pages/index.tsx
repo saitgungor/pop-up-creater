@@ -4,8 +4,13 @@ import Head from 'next/head';
 import MainNavigation from '../components/layout/MainNavigation';
 import Link from 'next/link';
 import AccordionCollapse from '../components/UI/Accordion-collapse';
+import { useDispatch } from 'react-redux';
+import { modalActions } from '../store/modal-slice';
 
 const Home: NextPage = () => {
+  const dispatch = useDispatch();
+  dispatch(modalActions.resetModal(''));
+
   return (
     <Fragment>
       <Head>

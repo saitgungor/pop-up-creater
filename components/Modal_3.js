@@ -1,17 +1,58 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { modalActions } from '../store/modal-slice';
+
 const Modal_3 = () => {
+  const dispatch = useDispatch();
+  const initialModalProps = {
+    id: '3',
+    content1: 'plans',
+    content2: 'Choose best for you',
+    content3: 'Only pay for the capacity that you use.',
+    content4: 'Starter',
+    content5: '1 free (then $15 per meember / month)',
+    content6: 'Pro',
+    content7: '$19 per member/month',
+    content8: 'Business',
+    content9: '$29 per member/month',
+    contentCount: 9,
+    color: '#7D4AEA',
+    isUpdated: true,
+  };
+
+  const activeModalId = useSelector(state => state.modal.activeModalId);
+  useEffect(() => {
+    if (activeModalId !== initialModalProps.id) return;
+    dispatch(modalActions.updateModalProps(initialModalProps));
+  }, [dispatch]);
+  const modalProps = useSelector(state => state.modal.modalProps);
+  const activeProps = modalProps.isUpdated ? modalProps : initialModalProps;
+  let color;
+  if (activeProps.color === '#ffffff') {
+    color = 'bg-white';
+  } else if (activeProps.color === '#000000') {
+    color = 'bg-black';
+  } else {
+    color = `bg-[${activeProps.color}]`;
+  }
+
+  const classNames = `${activeProps.positionClassName} ${activeProps.scale}`;
+
   return (
-    <div className="flex flex-col items-center bg-white w-120 h-150 rounded-lg relative">
+    <div
+      className={`flex flex-col items-center bg-white w-120 h-150 rounded-lg relative ${classNames}`}
+    >
       <div className="absolute top-[23px] right-[23px] cursor-pointer">
         <img src="/images/close-icon.svg" alt="close-icon" />
       </div>
       <div className="uppercase text-[#7D4AEA] text-lg mt-[49px]">
-        <p>plans</p>
+        <p>{activeProps.content1}</p>
       </div>
       <div className="mt-[14px] text-3xl font-bold">
-        <p>Choose best for you</p>
+        <p>{activeProps.content2}</p>
       </div>
       <div className="mt-[15px] text-xl">
-        <p>Only pay for the capacity that you use.</p>
+        <p>{activeProps.content3}</p>
       </div>
       <div className="w-full px-[65px] mt-[52px]">
         <div className="form-check ">
@@ -25,10 +66,10 @@ const Modal_3 = () => {
             className="form-check-label inline-block font-medium"
             htmlFor="flexRadioDefault1"
           >
-            Starter
+            {activeProps.content4}
           </label>
           <p className="text-sm text-[#717791] ml-[31px] mt-[10px]">
-            1 free (then $15 per meember / month)
+            {activeProps.content5}
           </p>
         </div>
         <div className="form-check mt-[30px]">
@@ -42,10 +83,10 @@ const Modal_3 = () => {
             className="form-check-label inline-block font-medium"
             htmlFor="flexRadioDefault1"
           >
-            Pro
+            {activeProps.content6}
           </label>
           <p className="text-sm text-[#717791] ml-[31px] mt-[10px]">
-            $19 per member/month
+            {activeProps.content7}
           </p>
         </div>
         <div className="form-check mt-[30px]">
@@ -59,10 +100,10 @@ const Modal_3 = () => {
             className="form-check-label inline-block font-medium"
             htmlFor="flexRadioDefault1"
           >
-            Business
+            {activeProps.content8}
           </label>
           <p className="text-sm text-[#717791] ml-[31px] mt-[10px]">
-            $29 per member/month
+            {activeProps.content9}
           </p>
         </div>
       </div>
@@ -72,8 +113,10 @@ const Modal_3 = () => {
         </button>
 
         <button
-          className="w-[168px] h-12 text-white rounded-lg bg-[#7D4AEA]
- flex justify-center items-center"
+          className={`w-[168px] h-12 text-white rounded-lg ${
+            color === 'bg-white' ? 'text-black' : 'text-white'
+          } ${color}
+ flex justify-center items-center`}
         >
           Continue
         </button>

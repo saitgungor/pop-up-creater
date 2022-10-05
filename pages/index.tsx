@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import MainNavigation from '../components/layout/MainNavigation';
@@ -9,7 +9,9 @@ import { modalActions } from '../store/modal-slice';
 
 const Home: NextPage = () => {
   const dispatch = useDispatch();
-  dispatch(modalActions.resetModal(''));
+  useEffect(() => {
+    dispatch(modalActions.resetModal(''));
+  }, []);
 
   return (
     <Fragment>

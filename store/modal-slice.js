@@ -10,7 +10,7 @@ const modalSlice = createSlice({
     disableAfterScroll: true,
     disableTrafficSource: true,
     modalProps: {
-      scale: '50',
+      scale: 'scale-50',
       size: 's',
       position: 'm',
       positionClassName:
@@ -20,6 +20,19 @@ const modalSlice = createSlice({
     },
   },
   reducers: {
+    resetModal(state, action) {
+      state.activeModalId = '';
+      state.modalProps = {
+        scale: 'scale-50',
+        size: 's',
+        position: 'm',
+        positionClassName:
+          'absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]',
+        imageExist: true,
+        isDesktopAvailable: true,
+      };
+    },
+
     updateImageSrc(state, action) {
       state.imageURL = action.payload;
       state.modalProps = { ...state.modalProps, imgSrc: action.payload };

@@ -31,9 +31,11 @@ const Modal_1 = () => {
     color = `bg-[${activeProps.color}]`;
   }
 
+  const classNames = `${activeProps.positionClassName} ${activeProps.scale}`;
+
   return (
     <div
-      className={`flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg ${activeProps.positionClassName} ${activeProps.scale}`}
+      className={`flex flex-col items-center bg-white w-[480px] h-[446px] rounded-lg ${classNames}`}
     >
       <div className="bg-[#7D4AEA] w-[90px] h-[90px] mt-10 flex justify-center items-center rounded-full">
         <img
@@ -68,7 +70,7 @@ const Modal_1 = () => {
           <button
             className={`w-41.75 h-[48px] border border-[#D2DAE3] ${
               color === 'bg-white' ? 'text-black' : 'text-white'
-            } rounded-lg ${color} flex justify-center items-center`}
+            } ${color} rounded-lg  flex justify-center items-center`}
           >
             Continue
           </button>

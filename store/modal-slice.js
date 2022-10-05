@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, current } from '@reduxjs/toolkit';
 
 const modalSlice = createSlice({
   name: 'modal',
@@ -15,7 +15,6 @@ const modalSlice = createSlice({
       position: 'm',
       positionClassName:
         'absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]',
-      imageExist: true,
       isDesktopAvailable: true,
     },
   },
@@ -48,9 +47,9 @@ const modalSlice = createSlice({
     },
     updateSize(state, action) {
       let size;
-      if (action.payload === '50') size = 's';
-      if (action.payload === '75') size = 'm';
-      if (action.payload === '100') size = 'l';
+      if (action.payload === 'scale-50') size = 's';
+      if (action.payload === 'scale-75') size = 'm';
+      if (action.payload === 'scale-100') size = 'l';
       state.modalProps = { ...state.modalProps, scale: action.payload, size };
     },
     updatePosition(state, action) {

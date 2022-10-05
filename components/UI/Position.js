@@ -11,7 +11,6 @@ const Position = () => {
     let positionClassName;
     switch (id) {
       case 'tr':
-        console.log('tr');
         positionClassName = 'absolute top-0 right-0 origin-top-right ';
         break;
       case 'tm':

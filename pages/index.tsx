@@ -24,11 +24,11 @@ const Home: NextPage = () => {
             directly in your markup.
           </p>
         </div>
-        <button className="w-[171px] h-[60px] flex justify-center sm: items-center bg-[#7D4AEA] font-medium text-lg text-white rounded-xl mt-[60px]">
-          <Link href="/templates">
+        <Link href="/templates">
+          <button className="w-[171px] h-[60px] flex justify-center sm: items-center bg-[#7D4AEA] font-medium text-lg text-white rounded-xl mt-[60px]">
             <a>Try it out now</a>
-          </Link>
-        </button>
+          </button>
+        </Link>
         <ul className="flex mt-10 text-[13px] font-poppins gap-[25px] ">
           <li className="flex items-center ">
             <span className="mr-[10px] h-4 w-4 flex items-center justify-center">
@@ -277,15 +277,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-{
-  /* <button
-                type="button"
-                className="flex items-center justify-between w-full pl-[30px] font-medium text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
-                data-accordion-target="#accordion-collapse-body-1"
-                aria-expanded="true"
-                aria-controls="accordion-collapse-body-1"
-              >
-                <span>What is Flowbite?</span>
-              </button> */
-}

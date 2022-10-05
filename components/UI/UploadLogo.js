@@ -17,7 +17,7 @@ const UploadLogo = () => {
   };
   return (
     <div
-      className="flex justify-center w-[378px] h-[178px] mt-[15px]   bg-white border-2 border-[#DDDDDD] border-dashed rounded-xl appearance-none cursor-pointer hover:border-gray-400 focus:outline-none"
+      className="flex justify-center w-11/12 h-[178px] mt-[15px]   bg-white border-2 border-[#DDDDDD] border-dashed rounded-xl appearance-none cursor-pointer hover:border-gray-400 focus:outline-none"
       onClick={clickHandler}
     >
       <div className="flex flex-col items-center">

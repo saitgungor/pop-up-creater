@@ -9,6 +9,7 @@ const modalSlice = createSlice({
     disableAfterSeconds: true,
     disableAfterScroll: true,
     disableTrafficSource: true,
+    showCode: false,
     modalProps: {
       scale: 'scale-50',
       size: 's',
@@ -30,6 +31,7 @@ const modalSlice = createSlice({
         imageExist: true,
         isDesktopAvailable: true,
       };
+      state.imageURL = '';
     },
 
     updateImageSrc(state, action) {
@@ -92,6 +94,15 @@ const modalSlice = createSlice({
         ...state.modalProps,
         isMobileAvailable: action.payload,
       };
+    },
+    setSendFormData(state, action) {
+      state.modalProps = { ...state.modalProps, sendFormData: action.payload };
+    },
+    setSendClickData(state, action) {
+      state.modalProps = { ...state.modalProps, sendClickData: action.payload };
+    },
+    showCode(state, action) {
+      state.showCode = true;
     },
   },
 });

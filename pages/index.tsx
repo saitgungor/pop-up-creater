@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import MainNavigation from '../components/layout/MainNavigation';
 import Link from 'next/link';
-import AccordionCollapse from '../components/UI/Accordion-collapse';
+import AccordionCollapse from '../components/UI/AccordionCollapse';
 import { useDispatch } from 'react-redux';
 import { modalActions } from '../store/modal-slice';
 

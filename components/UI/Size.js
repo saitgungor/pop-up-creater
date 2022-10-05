@@ -4,7 +4,6 @@ import { modalActions } from '../../store/modal-slice';
 const Size = () => {
   const dispatch = useDispatch();
   const scale = useSelector(state => state.modal.modalProps.scale);
-  console.log(scale);
 
   const changeSizeHandler = event => {
     const id = event.target.id;

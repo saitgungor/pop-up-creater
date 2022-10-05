@@ -83,10 +83,6 @@ const Step4 = () => {
         onChange={trafficSourceHandler}
       />
       <div className="flex justify-between mt-[30px]  w-11/12 text-sm font-semibold">
-        <h3>Browser Language</h3>
-        <ToggleSwitch switchFor="BrowserLanguage" />
-      </div>
-      <div className="flex justify-between mt-[30px]  w-11/12 text-sm font-semibold">
         <h3>Exit Intent Targeting</h3>
         <ToggleSwitch switchFor="exitIntentTargeting" />
       </div>

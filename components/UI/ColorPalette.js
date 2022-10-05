@@ -10,7 +10,7 @@ const ColorPalete = () => {
   };
   return (
     <div
-      className="w-[303px] h-[42px] gap-[10px] grid grid-cols-6"
+      className="w-[303px] h-[42px] gap-[10px] grid grid-cols-6 mt-[15px]"
       onClick={changeColorHandler}
     >
       <div

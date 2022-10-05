@@ -22,7 +22,7 @@ const ChangeContent1 = () => {
   return (
     <div className={`${contentCount >= 1 ? '' : 'hidden'}`}>
       <input
-        className="w-[378px] h-9 border mt-[15px] border-[#DDDDDD] rounded-lg pl-3 placeholder-black outline-none focus:border-[#7D4AEA] focus:ring focus:ring-violet-300"
+        className="w-11/12 h-9 border mt-[15px] border-[#DDDDDD] rounded-lg pl-3 placeholder-black outline-none focus:border-[#7D4AEA] focus:ring focus:ring-violet-300"
         type="text"
         id="content-1"
         onChange={onChangeHandler}
